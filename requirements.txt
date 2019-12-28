@@ -1,0 +1,4 @@
+smtplib
+email
+argparse
+keyring
