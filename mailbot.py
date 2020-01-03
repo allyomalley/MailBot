@@ -95,19 +95,19 @@ if __name__ == "__main__":
 		'--store',
 		action='store_true',
 		dest='store',
-		help='Target hostname to generate delegation graph from.',
+		help='Store a sender account password.',
 	)
 	required_group.add_argument(
 		'-d',
 		'--delete',
 		action='store_true',
 		dest='delete',
-		help='Target hostname to generate delegation graph from.',
+		help='Delete a sender account password.',
 	)
 
 	parser.add_argument(
 		'--sender',
-		help='Path to the MassDNS executable, if not installed with this repo',
+		help='Email address of the sender account.',
 		type=str,
 		required=True
 	)
