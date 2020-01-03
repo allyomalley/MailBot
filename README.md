@@ -1,12 +1,12 @@
 
 # MailBot
-Tool to automatically send results from your Python scripts to your inbox as text or as a file attachment, storing the sender email account's password securely in the keychain.
+Tool to automatically email results from your Python scripts to your inbox as text or as a file attachment, storing the sender email account's password securely in the keychain.
 
 ## Overview
 
-MailBot can be imported into other Python projects to simplify integrating sending email into your scripts. When initializing MailBot, the class requires you to pass the desired sender email address and recipient email address as arguments. When invoking the send mail method, you can choose to send your results as an attached file, or as plaintext in the message body.
+MailBot can be imported into Python projects to simplify integrating email sending into your scripts. When initializing MailBot, the class requires you to pass the desired sender email address and recipient email address as arguments. When invoking the send mail method, you can choose to send your results as an attached file, or as plaintext in the message body.
 
-The use of this tool requires that you setup a free GMail account, and that this account has enabled the *'Allow Less Secure App Access'* setting (More on setup below). The password of the sender account is required to send mail from the command line - instead of hardcoding a sensitive password in code, MailBot provides a quick method to store the password securely in your system's keychain.
+The use of this tool requires that you setup a free GMail account, and that this account has enabled the *'Allow Less Secure App Access'* setting (More on setup below). The password of the sender account is required to send mail from the command line - instead of hardcoding a sensitive password in code or storing it in memory, MailBot provides a quick method to securely provide and store the password in your system's keychain.
 
 
 ## Installation
@@ -79,7 +79,7 @@ Now, you can initialize a MailBot instance by providing your sender and desired 
 bot = mailbot.MailBot("myrecipientemail@gmail.com", "mysenderaccount@gmail.com")
 ```
 
-There are two methods for sending mail - *'sendMailWithData'*, and *'sendMailWithFile'*. Pass them the desired subject of the message, and then either the text for the body or the path of the file to be attached.
+There are two methods for sending mail - *'sendMailWithData'*, and *'sendMailWithFile'*. Pass them the desired subject of the message, along with either the text for the body or the path of the file to be attached.
 
 ```
 bot.sendMailWithData("Recon Scan Results", "hello\nfriend\n")
